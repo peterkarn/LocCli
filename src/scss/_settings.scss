@@ -20,6 +20,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  line-height: 1.4;
   font-family: "ProximaNova";
   font-weight: 400;
   background-color: #F5F5F5;
@@ -181,4 +182,10 @@ a {
 
 .accent-span {
   color: var(--primary);
+}
+
+.dollar {
+  &:after {
+    content: '$';
+  }
 }
