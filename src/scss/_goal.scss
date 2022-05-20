@@ -4,6 +4,10 @@
     @include col();
     @include size(6);
     @include size-sm(12);
+
+    @media screen and (max-width: 780px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__info {
@@ -21,12 +25,6 @@
   &__inner {
     @include row-flex();
     align-items: center;
-  }
-
-  &__title {
-    font-size: 26px;
-    line-height: 1.2;
-    @include adaptiv-value(margin-bottom, 40, 15, 1);
   }
 
 }

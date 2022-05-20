@@ -32,10 +32,8 @@
 
     @media screen and (max-width: 780px) {
       order: -1;
-      display: flex;
-      justify-content: center;
       margin-bottom: 30px;
-      padding-bottom: 30%;
+      padding-bottom: 35%;
     }
   }
 
@@ -68,12 +66,11 @@
     position: relative;
 
     @media screen and (max-width: 780px) {
+      padding: 30px;
       justify-content: center;
     }
 
-    @media screen and (max-width: 576px) {
-      padding: 30px;
-    }
+
 
     & p {
       color: var(--text);
