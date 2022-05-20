@@ -1,0 +1,38 @@
+.about {
+  padding: 50px 0;
+  background-color: var(--primary);
+  @include adaptiv-value(margin-bottom, 70, 35, 1);
+  @include adaptiv-value(padding-top, 50, 25, 1);
+  @include adaptiv-value(padding-bottom, 50, 25, 1);
+
+
+  &__inner {
+    @include row-flex();
+    align-items: center;
+  }
+
+  &__logo {
+    @include col();
+    @include size(5);
+    @include size-sm(12);
+
+    @media screen and (max-width: 780px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    @include col();
+    @include size(6);
+    @include size-sm(12);
+    @include shift-left(1);
+    @include shift-sm-left(0);
+
+  }
+
+  & p {
+    @include adaptiv-value(font-size, 16, 14, 1);
+    color: var(--light-color);
+    line-height: 1.2;
+  }
+}

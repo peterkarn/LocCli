@@ -1,0 +1,32 @@
+.goal {
+  &__img {
+    padding-bottom: 26%;
+    @include col();
+    @include size(6);
+    @include size-sm(12);
+  }
+
+  &__info {
+    @include col();
+    @include size(6);
+    @include size-sm(12);
+
+    & p {
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--text);
+    }
+  }
+
+  &__inner {
+    @include row-flex();
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 1.2;
+    @include adaptiv-value(margin-bottom, 40, 15, 1);
+  }
+
+}

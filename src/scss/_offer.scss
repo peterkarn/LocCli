@@ -1,0 +1,110 @@
+.offer {
+  padding: 30px 0;
+  min-height: 565px;
+  background-image: url("../img/offer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: grey;
+
+  &__inner {
+    @include row-flex();
+    align-items: center;
+  }
+
+  &__info {
+    @include col();
+    @include size(8);
+    @include size-sm(12);
+
+    display: flex;
+    flex-direction: column;
+
+    & p {
+      color: var(--light-color);
+      line-height: 1.4;
+      max-width: 510px;
+      @include adaptiv-value(font-size, 16, 14, 1);
+
+      @media screen and (max-width: 767px) {
+        max-width: unset;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: unset;
+    }
+  }
+
+  &__descr {
+    @include adaptiv-value(margin-bottom, 30, 15, 1);
+  }
+
+  &__mockup {
+    @include col();
+    @include size(3);
+    @include size-sm(12);
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 780px) {
+      order: -1;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/svg/tentacle-1.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      // width: 11vw;
+      width: 138px;
+      height: 289px;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-80%);
+
+      @media screen and (max-width: 780px) {
+        transform: translateX(-70%);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/svg/tentacle-2.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      // width: 17vw;
+      width: 233px;
+      height: 485px;
+      right: 0;
+      top: 50%;
+      transform: translate(80%, -50%);
+      z-index: -1;
+    }
+
+  }
+
+  &__title {
+    font-size: 34px;
+    line-height: 1.2;
+    color: var(--text-secondary);
+    @include adaptiv-value(margin-bottom, 30, 15, 1);
+    @include adaptiv-value(font-size, 34, 24, 1);
+
+  }
+
+  &__btn {
+    align-self: flex-start;
+
+    @media screen and (max-width: 767px) {
+      max-width: unset;
+      align-self: unset;
+    }
+  }
+}
